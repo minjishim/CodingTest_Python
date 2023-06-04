@@ -14,7 +14,8 @@ def solution(m, n, puddles):
     for i in range(0, n):
         for j in range(0, m):
             # if(graph[i][j] == 1):
-            if([j+1, i+1] in puddles or [i, j] == [0, 0]):
+            if([j+1, i+1] in puddles or [i, j] == [0, 0]):  # puddles는 x, y 좌표가 거꾸로
+                                                            # puddles의 경우에는 (0, 0)부터가 아닌 (1, 1)부터 시작이므로 +1씩
                 continue
             else:
                 graph[i][j] = graph[i-1][j] + graph[i][j-1]
