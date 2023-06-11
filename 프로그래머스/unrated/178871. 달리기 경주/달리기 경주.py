@@ -1,5 +1,3 @@
-# 
-
 def solution(players, callings):
     dic = {v:k for k,v in enumerate(players)}
     
