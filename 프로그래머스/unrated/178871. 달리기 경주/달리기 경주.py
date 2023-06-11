@@ -9,6 +9,9 @@ def solution(players, callings):
         dic[players[pre]], dic[players[now]] = dic[players[pre]] - 1 , dic[players[now]] + 1
         
     # dic의 키값을 return 하는 것이 아니라, players를 return 하는 것에 주의
+    # 또는, 주석으로 표시해둔 line 13~14로 가능
+    # sorted_by_value = sorted(dic.items(), key=lambda x: x[1], reverse=False)
+    # return [i[0] for i in sorted_by_value]
     return players
 
 '''
